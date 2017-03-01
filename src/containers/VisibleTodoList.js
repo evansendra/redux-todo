@@ -10,12 +10,14 @@ const getVisibleTodos = (todos, filter) => {
       return todos.filter(t => !t.completed)
     case 'SHOW_COMPLETED':
       return todos.filter(t => t.completed)
+    default:
+      throw new Error('Should have a visibility filter')
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    todos: getVisibleTodos(state.todos, state.filter)
+    todos: getVisibleTodos(state.todos, state.visibilityFilter)
   }
 }
 
