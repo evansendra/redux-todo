@@ -1,3 +1,6 @@
+/**
+ * before routing was implemented and Link was imported from 'react-router'
+ */
 import React, { PropTypes } from 'react'
 
 const Link = ({ active, children, onClick }) => {
